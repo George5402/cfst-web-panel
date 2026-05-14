@@ -1,0 +1,10 @@
+node_modules
+database.json
+result*.csv
+ip_*.txt
+cfst
+cfst.exe
+.git
+.gitignore
+docs
+*.md

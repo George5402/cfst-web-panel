@@ -1,0 +1,13 @@
+services:
+  cfst-web-panel:
+    build: .
+    ports:
+      - "${PORT:-3088}:3088"
+    volumes:
+      # Named volume persists database.json and cfst binary across restarts.
+      # On first launch Docker copies /app from the image into the volume.
+      - panel-data:/app
+    restart: unless-stopped
+
+volumes:
+  panel-data:
